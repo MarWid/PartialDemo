@@ -1,0 +1,58 @@
+﻿@model View.Models.Person
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test</title>
+</head>
+<body>
+    <div>Navn @Model.Navn</div> @*Behøver ikke bruges længere*@
+    <input type="text" value="@Model.Navn" />@*Behøver ikke bruges længere skal holde styr på alt muligt*@
+    <hr />
+
+    @Html.DisplayNameFor(m => m.Navn) @*Viser navnet på egenskaben*@
+
+    <hr />
+
+    @Html.DisplayNameFor(m => m.Navn) = @Html.DisplayFor(m => m.Navn) @*Viser navnet på egenskaben og værdien*@
+
+    <hr />
+
+    @Html.DisplayForModel()
+
+    <hr />
+
+    @Html.LabelFor(m => m.Navn)
+
+    <hr />
+
+    @Html.LabelFor(m => m.Navn): @Html.TextBoxFor(m => m.Navn)
+
+    <hr />
+
+    @Html.LabelFor(m => m.ErILive): @Html.CheckBoxFor(m => m.ErILive)
+
+    <hr />
+
+    @Html.LabelFor(m => m.Navn): @Html.EditorFor(m => m.Navn)
+    @Html.LabelFor(m => m.Alder): @Html.EditorFor(m => m.Alder)
+    @Html.LabelFor(m => m.ErILive): @Html.EditorFor(m => m.ErILive)
+
+    <hr />
+
+    @Html.EditorForModel()
+
+    <hr />
+    @Html.EnumDropDownListFor(m => m.Køn)
+
+
+
+
+</body>
+</html>

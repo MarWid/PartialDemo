@@ -1,0 +1,36 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Min app</title>
+
+    <style>
+        body {
+            background-color: yellow;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <h1>Min app</h1>
+    <hr />
+
+
+    @RenderBody() @*Tag det som undersider kommer med og sæt det ind her*@
+
+
+    <hr />
+    <h5>Min footer</h5>
+
+    @RenderSection("footer", false)
+
+
+</body>
+</html>
