@@ -14,5 +14,20 @@ namespace PartialDemo
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
+
+
+        // Global fejlhåndtering
+        protected void Application_Error()
+        {
+            // Her ender alle fejl
+
+
+            var ex = Server.GetLastError();
+            // log ex
+
+            // redirect til fejl
+        }
+
+
     }
 }
